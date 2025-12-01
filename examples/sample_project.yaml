@@ -1,0 +1,34 @@
+# Example Project Input
+# This file defines a sample project for generating a submittal
+
+name: "Office Building Lighting Upgrade"
+number: "2024-001"
+client: "ABC Commercial Properties"
+contractor: "XYZ Electrical Contractors"
+date: "2024-01-15"
+
+# List of product IDs to include in the submittal
+products:
+  - led_panel_1
+  - led_downlight_1
+  - emergency_exit_1
+  - wire_12awg
+  - conduit_emt
+
+# Optional: Custom section definitions
+# If not provided, uses default sections from config/sections.yaml
+sections:
+  - id: lighting
+    title: "Lighting Fixtures"
+    description: "LED lighting fixtures for general and emergency illumination."
+    product_ids:
+      - led_panel_1
+      - led_downlight_1
+      - emergency_exit_1
+
+  - id: electrical
+    title: "Electrical Materials"
+    description: "Wiring and conduit materials for electrical distribution."
+    product_ids:
+      - wire_12awg
+      - conduit_emt

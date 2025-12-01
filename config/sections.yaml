@@ -1,0 +1,32 @@
+# Section order and structure configuration
+# Defines the order of sections in the submittal document
+
+section_order:
+  - cover_page
+  - intro_text
+  - table_of_contents
+  - product_sections
+  - closing_text
+
+# Default product sections (can be overridden by project)
+default_product_sections:
+  - id: lighting
+    title: "Lighting Fixtures"
+    description: "LED panels, downlights, and emergency lighting fixtures."
+    product_categories:
+      - led_panel
+      - led_downlight
+      - emergency
+
+  - id: electrical
+    title: "Electrical Materials"
+    description: "Wiring, conduit, and electrical components."
+    product_categories:
+      - wire
+      - conduit
+      - electrical
+
+  - id: msds
+    title: "Material Safety Data Sheets"
+    description: "Safety data sheets for all products with chemical components."
+    include_all_msds: true

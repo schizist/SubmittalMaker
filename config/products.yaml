@@ -1,0 +1,66 @@
+# Product catalog configuration
+# Each product has metadata, cut sheet references, and MSDS info
+
+products:
+  led_panel_1:
+    name: "LED Panel Light 2x4"
+    manufacturer: "LumiTech"
+    model: "LT-2440"
+    description: "High-efficiency 2x4 LED panel for commercial applications"
+    specifications:
+      wattage: "40W"
+      lumens: "4800lm"
+      color_temp: "4000K"
+      dimensions: "24\" x 48\" x 2\""
+    cut_sheet: "cut_sheets/lt_2440.pdf"
+    msds: "msds/lt_2440_msds.pdf"
+
+  led_downlight_1:
+    name: "LED Downlight 6\""
+    manufacturer: "LumiTech"
+    model: "LT-DL6"
+    description: "6-inch recessed LED downlight for general lighting"
+    specifications:
+      wattage: "15W"
+      lumens: "1200lm"
+      color_temp: "3000K"
+      dimensions: "6\" diameter x 4\" depth"
+    cut_sheet: "cut_sheets/lt_dl6.pdf"
+    msds: "msds/lt_dl6_msds.pdf"
+
+  emergency_exit_1:
+    name: "LED Emergency Exit Sign"
+    manufacturer: "SafeExit"
+    model: "SE-100"
+    description: "LED emergency exit sign with battery backup"
+    specifications:
+      wattage: "5W"
+      battery_backup: "90 minutes"
+      dimensions: "12\" x 8\" x 1.5\""
+    cut_sheet: "cut_sheets/se_100.pdf"
+    msds: "msds/se_100_msds.pdf"
+
+  wire_12awg:
+    name: "12 AWG THHN Wire"
+    manufacturer: "ConductorPro"
+    model: "CP-12THHN"
+    description: "12 AWG stranded copper THHN wire for building wiring"
+    specifications:
+      gauge: "12 AWG"
+      material: "Copper"
+      insulation: "THHN"
+      voltage_rating: "600V"
+    cut_sheet: "cut_sheets/cp_12thhn.pdf"
+    msds: "msds/cp_12thhn_msds.pdf"
+
+  conduit_emt:
+    name: "EMT Conduit 3/4\""
+    manufacturer: "ConduitMaster"
+    model: "CM-EMT34"
+    description: "3/4\" electrical metallic tubing"
+    specifications:
+      size: "3/4\""
+      material: "Steel"
+      finish: "Galvanized"
+    cut_sheet: "cut_sheets/cm_emt34.pdf"
+    msds: null
