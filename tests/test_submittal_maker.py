@@ -19,17 +19,17 @@ def sample_project():
         "client": "Test Client",
         "contractor": "Test Contractor",
         "date": "2024-01-01",
-        "products": ["led_panel_1", "wire_12awg"],
+        "products": ["anode_magnesium_17lb", "cable_hmwpe_8awg"],
         "sections": [
             {
-                "title": "Lighting",
-                "description": "Light fixtures",
-                "product_ids": ["led_panel_1"]
+                "title": "Anodes",
+                "description": "Cathodic protection anodes",
+                "product_ids": ["anode_magnesium_17lb"]
             },
             {
-                "title": "Electrical",
-                "description": "Electrical materials",
-                "product_ids": ["wire_12awg"]
+                "title": "Cables",
+                "description": "CP system cables",
+                "product_ids": ["cable_hmwpe_8awg"]
             }
         ]
     }

@@ -1,66 +1,393 @@
 # Product catalog configuration
 # Each product has metadata, cut sheet references, and MSDS info
+# Organized by cathodic protection and electrical categories
 
 products:
-  led_panel_1:
-    name: "LED Panel Light 2x4"
-    manufacturer: "LumiTech"
-    model: "LT-2440"
-    description: "High-efficiency 2x4 LED panel for commercial applications"
+  # =============================================================================
+  # ANODES
+  # =============================================================================
+  anode_magnesium_17lb:
+    name: "High Potential Magnesium Anode 17 lb"
+    manufacturer: "Farwest Corrosion"
+    model: "HP-MAG-17"
+    description: "High potential magnesium anode for cathodic protection"
     specifications:
-      wattage: "40W"
-      lumens: "4800lm"
-      color_temp: "4000K"
-      dimensions: "24\" x 48\" x 2\""
-    cut_sheet: "cut_sheets/lt_2440.pdf"
-    msds: "msds/lt_2440_msds.pdf"
+      weight: "17 lb"
+      core: "Galvanized Steel"
+      potential: "-1.75V CSE"
+      backfill: "75% Gypsum, 20% Bentonite, 5% Sodium Sulfate"
+    cut_sheet: "cut_sheets/hp_mag_17.pdf"
+    msds: "msds/magnesium_anode_msds.pdf"
+    certifications:
+      - "ASTM B843"
+    category: "anodes"
 
-  led_downlight_1:
-    name: "LED Downlight 6\""
-    manufacturer: "LumiTech"
-    model: "LT-DL6"
-    description: "6-inch recessed LED downlight for general lighting"
+  anode_zinc_30lb:
+    name: "Zinc Anode 30 lb"
+    manufacturer: "Farwest Corrosion"
+    model: "ZN-30"
+    description: "Zinc anode for marine and underground applications"
     specifications:
-      wattage: "15W"
-      lumens: "1200lm"
-      color_temp: "3000K"
-      dimensions: "6\" diameter x 4\" depth"
-    cut_sheet: "cut_sheets/lt_dl6.pdf"
-    msds: "msds/lt_dl6_msds.pdf"
+      weight: "30 lb"
+      core: "Steel"
+      potential: "-1.10V CSE"
+    cut_sheet: "cut_sheets/zn_30.pdf"
+    msds: "msds/zinc_anode_msds.pdf"
+    certifications:
+      - "ASTM B418"
+    category: "anodes"
 
-  emergency_exit_1:
-    name: "LED Emergency Exit Sign"
-    manufacturer: "SafeExit"
-    model: "SE-100"
-    description: "LED emergency exit sign with battery backup"
+  # =============================================================================
+  # REFERENCE CELLS
+  # =============================================================================
+  reference_cell_cse:
+    name: "Copper/Copper Sulfate Reference Electrode"
+    manufacturer: "Tinker & Rasor"
+    model: "CSE-500"
+    description: "Permanent copper/copper sulfate reference electrode for CP monitoring"
     specifications:
-      wattage: "5W"
-      battery_backup: "90 minutes"
-      dimensions: "12\" x 8\" x 1.5\""
-    cut_sheet: "cut_sheets/se_100.pdf"
-    msds: "msds/se_100_msds.pdf"
+      type: "Cu/CuSO4"
+      accuracy: "±5mV"
+      life_expectancy: "20+ years"
+    cut_sheet: "cut_sheets/cse_500.pdf"
+    msds: "msds/copper_sulfate_msds.pdf"
+    certifications:
+      - "NACE SP0169"
+    category: "reference_cells"
 
-  wire_12awg:
-    name: "12 AWG THHN Wire"
-    manufacturer: "ConductorPro"
-    model: "CP-12THHN"
-    description: "12 AWG stranded copper THHN wire for building wiring"
+  reference_cell_zinc:
+    name: "Zinc Reference Electrode"
+    manufacturer: "Tinker & Rasor"
+    model: "ZRE-100"
+    description: "Permanent zinc reference electrode for CP monitoring"
     specifications:
-      gauge: "12 AWG"
-      material: "Copper"
-      insulation: "THHN"
+      type: "Zinc"
+      accuracy: "±10mV"
+      life_expectancy: "15+ years"
+    cut_sheet: "cut_sheets/zre_100.pdf"
+    msds: null
+    certifications:
+      - "NACE SP0169"
+    category: "reference_cells"
+
+  # =============================================================================
+  # RECTIFIERS
+  # =============================================================================
+  rectifier_oil_cooled:
+    name: "Oil Cooled Rectifier 50V/50A"
+    manufacturer: "Universal Rectifiers"
+    model: "OC-5050"
+    description: "Oil-cooled rectifier for impressed current cathodic protection"
+    specifications:
+      output_voltage: "50V DC"
+      output_current: "50A DC"
+      input_voltage: "120/240V AC"
+      cooling: "Oil Immersed"
+      efficiency: "85%"
+    cut_sheet: "cut_sheets/oc_5050.pdf"
+    msds: "msds/transformer_oil_msds.pdf"
+    certifications:
+      - "UL Listed"
+      - "NACE SP0572"
+    category: "rectifiers"
+
+  rectifier_air_cooled:
+    name: "Air Cooled Rectifier 24V/10A"
+    manufacturer: "Universal Rectifiers"
+    model: "AC-2410"
+    description: "Air-cooled rectifier for impressed current cathodic protection"
+    specifications:
+      output_voltage: "24V DC"
+      output_current: "10A DC"
+      input_voltage: "120V AC"
+      cooling: "Air Cooled"
+      efficiency: "80%"
+    cut_sheet: "cut_sheets/ac_2410.pdf"
+    msds: null
+    certifications:
+      - "UL Listed"
+    category: "rectifiers"
+
+  # =============================================================================
+  # CABLES
+  # =============================================================================
+  cable_hmwpe_8awg:
+    name: "HMWPE Insulated Cable #8 AWG"
+    manufacturer: "Kerite"
+    model: "HMWPE-8"
+    description: "High molecular weight polyethylene insulated cable for CP systems"
+    specifications:
+      gauge: "#8 AWG"
+      conductor: "Solid Copper"
+      insulation: "HMWPE 45 mil"
       voltage_rating: "600V"
-    cut_sheet: "cut_sheets/cp_12thhn.pdf"
-    msds: "msds/cp_12thhn_msds.pdf"
+    cut_sheet: "cut_sheets/hmwpe_8.pdf"
+    msds: null
+    certifications:
+      - "ASTM D1248"
+    category: "cables"
 
-  conduit_emt:
-    name: "EMT Conduit 3/4\""
-    manufacturer: "ConduitMaster"
-    model: "CM-EMT34"
-    description: "3/4\" electrical metallic tubing"
+  cable_kynar_12awg:
+    name: "Kynar Insulated Cable #12 AWG"
+    manufacturer: "Kerite"
+    model: "KYNAR-12"
+    description: "Kynar insulated cable for direct burial CP applications"
     specifications:
-      size: "3/4\""
+      gauge: "#12 AWG"
+      conductor: "Stranded Copper"
+      insulation: "PVDF (Kynar)"
+      voltage_rating: "600V"
+    cut_sheet: "cut_sheets/kynar_12.pdf"
+    msds: null
+    certifications:
+      - "UL Listed"
+    category: "cables"
+
+  # =============================================================================
+  # CONDUIT
+  # =============================================================================
+  conduit_pvc_2in:
+    name: "Schedule 80 PVC Conduit 2\""
+    manufacturer: "Cantex"
+    model: "PVC-80-2"
+    description: "Schedule 80 PVC conduit for underground electrical"
+    specifications:
+      size: "2\""
+      schedule: "80"
+      material: "PVC"
+      length: "10 ft"
+    cut_sheet: "cut_sheets/pvc_80_2.pdf"
+    msds: "msds/pvc_conduit_msds.pdf"
+    category: "conduit"
+
+  conduit_rigid_1in:
+    name: "Rigid Galvanized Steel Conduit 1\""
+    manufacturer: "Allied Tube"
+    model: "RGS-1"
+    description: "Rigid galvanized steel conduit for above ground applications"
+    specifications:
+      size: "1\""
       material: "Steel"
       finish: "Galvanized"
-    cut_sheet: "cut_sheets/cm_emt34.pdf"
+      length: "10 ft"
+    cut_sheet: "cut_sheets/rgs_1.pdf"
     msds: null
+    category: "conduit"
+
+  # =============================================================================
+  # CONDUCTORS
+  # =============================================================================
+  conductor_copper_4awg:
+    name: "Bare Copper Conductor #4 AWG"
+    manufacturer: "Southwire"
+    model: "BC-4-SOLID"
+    description: "Solid bare copper conductor for grounding applications"
+    specifications:
+      gauge: "#4 AWG"
+      type: "Solid"
+      material: "Copper"
+    cut_sheet: "cut_sheets/bc_4.pdf"
+    msds: null
+    category: "conductors"
+
+  conductor_copper_2awg:
+    name: "Stranded Bare Copper Conductor #2 AWG"
+    manufacturer: "Southwire"
+    model: "BC-2-STR"
+    description: "Stranded bare copper conductor for grounding and bonding"
+    specifications:
+      gauge: "#2 AWG"
+      type: "Stranded"
+      material: "Copper"
+    cut_sheet: "cut_sheets/bc_2_str.pdf"
+    msds: null
+    category: "conductors"
+
+  # =============================================================================
+  # EXOTHERMIC WELDS
+  # =============================================================================
+  exothermic_weld_cadweld:
+    name: "Cadweld Exothermic Weld Kit"
+    manufacturer: "nVent ERICO"
+    model: "CADWELD-PLUS"
+    description: "Exothermic weld kit for permanent copper-to-copper connections"
+    specifications:
+      type: "Copper to Copper"
+      connection_type: "Cable to Cable"
+      temperature: "2000°F"
+    cut_sheet: "cut_sheets/cadweld_plus.pdf"
+    msds: "msds/cadweld_msds.pdf"
+    certifications:
+      - "IEEE 837"
+      - "UL Listed"
+    category: "exothermic_welds"
+
+  exothermic_weld_molds:
+    name: "Exothermic Weld Molds"
+    manufacturer: "nVent ERICO"
+    model: "CADWELD-MOLD"
+    description: "Graphite molds for exothermic welding"
+    specifications:
+      material: "Graphite"
+      reusable: "Yes (50+ uses)"
+    cut_sheet: "cut_sheets/cadweld_molds.pdf"
+    msds: null
+    category: "exothermic_welds"
+
+  # =============================================================================
+  # JUNCTION BOXES
+  # =============================================================================
+  junction_box_nema4x:
+    name: "NEMA 4X Junction Box 12x12x6"
+    manufacturer: "Hoffman"
+    model: "A-12126NFSS"
+    description: "Stainless steel NEMA 4X junction box for CP connections"
+    specifications:
+      dimensions: "12\" x 12\" x 6\""
+      material: "316 Stainless Steel"
+      rating: "NEMA 4X"
+    cut_sheet: "cut_sheets/a_12126nfss.pdf"
+    msds: null
+    certifications:
+      - "UL Listed"
+      - "NEMA 4X"
+    category: "junction_boxes"
+
+  junction_box_pvc:
+    name: "PVC Junction Box 8x8x4"
+    manufacturer: "Carlon"
+    model: "E989NNJ"
+    description: "PVC junction box for underground CP applications"
+    specifications:
+      dimensions: "8\" x 8\" x 4\""
+      material: "PVC"
+      rating: "NEMA 4X"
+    cut_sheet: "cut_sheets/e989nnj.pdf"
+    msds: null
+    category: "junction_boxes"
+
+  # =============================================================================
+  # TEST STATIONS
+  # =============================================================================
+  test_station_flush:
+    name: "Flush Mount Test Station"
+    manufacturer: "Cott Manufacturing"
+    model: "TS-FM-2T"
+    description: "Flush mount test station with 2 terminals"
+    specifications:
+      type: "Flush Mount"
+      terminals: "2"
+      material: "Cast Iron with Brass Terminals"
+    cut_sheet: "cut_sheets/ts_fm_2t.pdf"
+    msds: null
+    category: "test_stations"
+
+  test_station_above_grade:
+    name: "Above Grade Test Station"
+    manufacturer: "Cott Manufacturing"
+    model: "TS-AG-4T"
+    description: "Above grade test station with 4 terminals"
+    specifications:
+      type: "Above Grade"
+      terminals: "4"
+      material: "Fiberglass with Stainless Steel Terminals"
+    cut_sheet: "cut_sheets/ts_ag_4t.pdf"
+    msds: null
+    category: "test_stations"
+
+  # =============================================================================
+  # APPURTENANCES
+  # =============================================================================
+  appurtenance_anode_backfill:
+    name: "Anode Backfill - 50 lb Bag"
+    manufacturer: "Farwest Corrosion"
+    model: "BF-50"
+    description: "Specialty backfill for magnesium and zinc anodes"
+    specifications:
+      weight: "50 lb"
+      composition: "75% Gypsum, 20% Bentonite, 5% Sodium Sulfate"
+    cut_sheet: "cut_sheets/bf_50.pdf"
+    msds: "msds/anode_backfill_msds.pdf"
+    category: "appurtenances"
+
+  appurtenance_wire_marker:
+    name: "Underground Wire Marker Tape"
+    manufacturer: "Brady"
+    model: "UWM-CP"
+    description: "Detectable underground warning tape for CP cables"
+    specifications:
+      width: "6\""
+      color: "Orange"
+      detectable: "Yes"
+    cut_sheet: "cut_sheets/uwm_cp.pdf"
+    msds: null
+    category: "appurtenances"
+
+  appurtenance_coating:
+    name: "Pipe Coating Repair Kit"
+    manufacturer: "Denso"
+    model: "PROTAL-7200"
+    description: "Epoxy-based coating repair material for pipeline touch-up"
+    specifications:
+      type: "Two-Part Epoxy"
+      cure_time: "24 hours"
+      service_temp: "-40°F to 200°F"
+    cut_sheet: "cut_sheets/protal_7200.pdf"
+    msds: "msds/protal_7200_msds.pdf"
+    certifications:
+      - "AWWA C222"
+    category: "appurtenances"
+
+  # =============================================================================
+  # MISC HARDWARE
+  # =============================================================================
+  hardware_split_bolt:
+    name: "Bronze Split Bolt Connector"
+    manufacturer: "Burndy"
+    model: "KS-29"
+    description: "Bronze split bolt for cable connections"
+    specifications:
+      material: "Silicon Bronze"
+      cable_range: "#8 to #2 AWG"
+    cut_sheet: "cut_sheets/ks_29.pdf"
+    msds: null
+    category: "misc_hardware"
+
+  hardware_compression_connector:
+    name: "Compression Connector H-Tap"
+    manufacturer: "Burndy"
+    model: "YHD-39"
+    description: "H-tap compression connector for underground splices"
+    specifications:
+      material: "Copper"
+      cable_range: "#8 to #4 AWG"
+    cut_sheet: "cut_sheets/yhd_39.pdf"
+    msds: null
+    category: "misc_hardware"
+
+  hardware_ground_rod:
+    name: "Copper Clad Ground Rod 5/8\" x 8'"
+    manufacturer: "Erico"
+    model: "GR-58-8"
+    description: "Copper clad steel ground rod for grounding systems"
+    specifications:
+      diameter: "5/8\""
+      length: "8'"
+      material: "Copper Clad Steel"
+    cut_sheet: "cut_sheets/gr_58_8.pdf"
+    msds: null
+    certifications:
+      - "UL Listed"
+    category: "misc_hardware"
+
+  hardware_ground_rod_clamp:
+    name: "Ground Rod Clamp Bronze"
+    manufacturer: "Erico"
+    model: "GRC-58"
+    description: "Bronze clamp for ground rod connections"
+    specifications:
+      material: "Bronze"
+      rod_size: "5/8\""
+    cut_sheet: "cut_sheets/grc_58.pdf"
+    msds: null
+    category: "misc_hardware"
