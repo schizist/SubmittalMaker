@@ -1,6 +1,5 @@
 """Configuration loader for YAML files."""
 
-import os
 from pathlib import Path
 from typing import Any
 

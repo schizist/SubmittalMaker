@@ -1,6 +1,5 @@
 """Tests for the pdf_generator module."""
 
-import os
 import tempfile
 from pathlib import Path
 
