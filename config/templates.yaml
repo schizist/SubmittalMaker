@@ -1,0 +1,83 @@
+# Template configuration for submittal document sections
+# Templates use Jinja2 syntax for variable substitution
+
+templates:
+  cover_page: |
+    # {{ project.name }}
+    
+    ## Submittal Package
+    
+    **Project Number:** {{ project.number }}
+    
+    **Prepared For:** {{ project.client }}
+    
+    **Prepared By:** {{ project.contractor }}
+    
+    **Date:** {{ project.date }}
+    
+    ---
+
+  table_of_contents: |
+    ## Table of Contents
+    
+    {% for section in sections %}
+    {{ loop.index }}. {{ section.title }}
+    {% endfor %}
+    
+    ---
+
+  section_header: |
+    ## Section {{ section.number }}: {{ section.title }}
+    
+    {{ section.description }}
+    
+    ---
+
+  product_entry: |
+    ### {{ product.name }}
+    
+    **Manufacturer:** {{ product.manufacturer }}
+    
+    **Model:** {{ product.model }}
+    
+    **Description:** {{ product.description }}
+    
+    #### Specifications
+    
+    {% for key, value in product.specifications.items() %}
+    - **{{ key | replace('_', ' ') | title }}:** {{ value }}
+    {% endfor %}
+    
+    {% if product.cut_sheet %}
+    *Cut sheet attached: {{ product.cut_sheet }}*
+    {% endif %}
+    
+    {% if product.msds %}
+    *MSDS attached: {{ product.msds }}*
+    {% endif %}
+    
+    ---
+
+  intro_text: |
+    ## Introduction
+    
+    This submittal package contains product data, specifications, and safety information for materials to be used on {{ project.name }}.
+    
+    All products listed herein conform to the specifications outlined in the project documents and are submitted for approval prior to installation.
+    
+    ---
+
+  closing_text: |
+    ## Certification
+    
+    The undersigned certifies that the products and materials described in this submittal package meet or exceed the specifications required for {{ project.name }}.
+    
+    **Submitted By:** ________________________
+    
+    **Date:** ________________________
+    
+    **Approved By:** ________________________
+    
+    **Date:** ________________________
+    
+    ---

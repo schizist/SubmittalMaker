@@ -1,0 +1,54 @@
+# Example Project Input
+# This file defines a sample cathodic protection project for generating a submittal
+
+name: "Pipeline Cathodic Protection System"
+number: "2024-CP-001"
+client: "Energy Pipeline Corporation"
+contractor: "Corrosion Control Services Inc."
+date: "2024-01-15"
+
+# List of product IDs to include in the submittal
+products:
+  # Anodes
+  - anode_magnesium_17lb
+  - anode_zinc_30lb
+  # Reference Cells
+  - reference_cell_cse
+  - reference_cell_zinc
+  # Rectifiers
+  - rectifier_oil_cooled
+  - rectifier_air_cooled
+  # Cables
+  - cable_hmwpe_8awg
+  - cable_kynar_12awg
+  # Conduit
+  - conduit_pvc_2in
+  - conduit_rigid_1in
+  # Conductors
+  - conductor_copper_4awg
+  - conductor_copper_2awg
+  # Exothermic Welds
+  - exothermic_weld_cadweld
+  - exothermic_weld_molds
+  # Junction Boxes
+  - junction_box_nema4x
+  - junction_box_pvc
+  # Test Stations
+  - test_station_flush
+  - test_station_above_grade
+  # Appurtenances
+  - appurtenance_anode_backfill
+  - appurtenance_wire_marker
+  - appurtenance_coating
+  # Misc Hardware
+  - hardware_split_bolt
+  - hardware_compression_connector
+  - hardware_ground_rod
+  - hardware_ground_rod_clamp
+
+# Uses default sections from config/sections.yaml:
+# - CERTIFICATIONS
+# - MATERIAL CUT SHEETS
+# - MATERIAL SAFETY DATA SHEETS (MSDS)
+# - SCHEMATICS
+# - CALCULATIONS

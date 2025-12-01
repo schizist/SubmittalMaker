@@ -1,0 +1,107 @@
+# Section order and structure configuration
+# Defines the order of sections in the submittal document
+
+section_order:
+  - cover_page
+  - intro_text
+  - table_of_contents
+  - product_sections
+  - closing_text
+
+# Default product sections (can be overridden by project)
+# Organized per cathodic protection submittal requirements
+default_product_sections:
+  - id: certifications
+    title: "CERTIFICATIONS"
+    description: "Product certifications, compliance documentation, and quality assurance certificates for all materials."
+    product_categories:
+      - anodes
+      - reference_cells
+      - rectifiers
+      - cables
+      - conduit
+      - conductors
+      - exothermic_welds
+      - junction_boxes
+      - test_stations
+      - appurtenances
+      - misc_hardware
+    include_certifications: true
+
+  - id: cut_sheets
+    title: "MATERIAL CUT SHEETS"
+    description: "Technical specifications and product data sheets for all materials."
+    product_categories:
+      - anodes
+      - reference_cells
+      - rectifiers
+      - cables
+      - conduit
+      - conductors
+      - exothermic_welds
+      - junction_boxes
+      - test_stations
+      - appurtenances
+      - misc_hardware
+    include_cut_sheets: true
+
+  - id: msds
+    title: "MATERIAL SAFETY DATA SHEETS (MSDS)"
+    description: "Safety data sheets for all products with chemical components."
+    include_all_msds: true
+
+  - id: schematics
+    title: "SCHEMATICS"
+    description: "System schematics, wiring diagrams, and installation drawings."
+    include_schematics: true
+
+  - id: calculations
+    title: "CALCULATIONS"
+    description: "Design calculations, current requirements, and anode life calculations."
+    include_calculations: true
+
+# Product category definitions for organizing submittals
+product_categories:
+  anodes:
+    title: "Anodes"
+    description: "Sacrificial anodes for cathodic protection systems"
+    
+  reference_cells:
+    title: "Reference Cells"
+    description: "Reference electrodes for CP monitoring and measurement"
+    
+  rectifiers:
+    title: "Rectifiers"
+    description: "Power supplies for impressed current cathodic protection systems"
+    
+  cables:
+    title: "Cables"
+    description: "Insulated cables for CP system wiring"
+    
+  conduit:
+    title: "Conduit"
+    description: "Conduit for cable protection and routing"
+    
+  conductors:
+    title: "Conductors"
+    description: "Bare conductors for grounding and bonding"
+    
+  exothermic_welds:
+    title: "Exothermic Welds"
+    description: "Exothermic welding materials for permanent connections"
+    
+  junction_boxes:
+    title: "Junction Boxes"
+    description: "Enclosures for electrical connections"
+    
+  test_stations:
+    title: "Test Stations"
+    description: "Test points for CP system monitoring"
+    
+  appurtenances:
+    title: "Appurtenances"
+    description: "Accessories and support materials"
+    
+  misc_hardware:
+    title: "Miscellaneous Hardware"
+    description: "Connectors, clamps, and other hardware"
